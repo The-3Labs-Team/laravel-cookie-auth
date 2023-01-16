@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace The3LabsTeam\LaravelCookieAuth\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelCookieAuthCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-cookie-auth';
 
     public $description = 'My command';
 
