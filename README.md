@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/the-3labs-team/laravel-cookie-auth/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/the-3labs-team/laravel-cookie-auth/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/the-3labs-team/laravel-cookie-auth.svg?style=flat-square)](https://packagist.org/packages/the-3labs-team/laravel-cookie-auth)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+A simple middleware for Laravel applications that creates a cookie for logged-in users. Used for simple configuration with [FastCGI](https://gist.github.com/murdercode/cb061b178d2883017a247b1f6c24e345).
 
 ## Installation
 
@@ -25,6 +25,9 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'cookie_name' => 'skip_cache',
+    'cookie_value' => true,
+    'cookie_lifetime' => 5,
 ];
 ```
 
