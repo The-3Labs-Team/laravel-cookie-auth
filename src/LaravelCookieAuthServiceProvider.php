@@ -22,4 +22,14 @@ class LaravelCookieAuthServiceProvider extends PackageServiceProvider
             //->hasMigration('create_laravel-cookie-auth_table')
             //->hasCommand(LaravelCookieAuthCommand::class);
     }
+
+    public function packageRegistered()
+    {
+        $this->app['router']->aliasMiddleware('laravel-cookie-auth', LaravelCookieAuth::class);
+    }
+
+    public function packageBooted()
+    {
+        //
+    }
 }

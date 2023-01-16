@@ -15,13 +15,6 @@ You can install the package via composer:
 composer require the-3labs-team/laravel-cookie-auth
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-cookie-auth-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -43,9 +36,14 @@ php artisan vendor:publish --tag="laravel-cookie-auth-views"
 
 ## Usage
 
+In your `Kernel.php` add the middleware as follows:
+
 ```php
-$laravelCookieAuth = new The3LabsTeam\LaravelCookieAuth();
-echo $laravelCookieAuth->echoPhrase('Hello, The3LabsTeam!');
+protected $middleware = [
+        // ...
+        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \The3LabsTeam\LaravelCookieAuth\LaravelCookieAuth::class, // <- here
+    ];
 ```
 
 ## Testing

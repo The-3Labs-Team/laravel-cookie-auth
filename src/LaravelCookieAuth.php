@@ -19,7 +19,13 @@ class LaravelCookieAuth
         $response = $next($request);
 
         if (auth()->check()) {
-            $response->withCookie(cookie('skip_cache', true, 5));
+            $response->withCookie(
+                cookie(
+                    config('cookie-auth.cookie_name'),
+                    config('cookie-auth.cookie_value'),
+                    config('cookie-auth.cookie_lifetime')
+                )
+            );
         }
         return $response;
 
