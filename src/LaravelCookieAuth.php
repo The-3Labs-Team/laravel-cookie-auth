@@ -27,7 +27,7 @@ class LaravelCookieAuth
                 )
             );
         }
-        return $response;
 
+        return $response;
     }
 }

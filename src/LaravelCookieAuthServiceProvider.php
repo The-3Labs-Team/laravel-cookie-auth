@@ -18,9 +18,9 @@ class LaravelCookieAuthServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-cookie-auth')
             ->hasConfigFile();
-            //->hasViews()
-            //->hasMigration('create_laravel-cookie-auth_table')
-            //->hasCommand(LaravelCookieAuthCommand::class);
+        //->hasViews()
+        //->hasMigration('create_laravel-cookie-auth_table')
+        //->hasCommand(LaravelCookieAuthCommand::class);
     }
 
     public function packageRegistered()
