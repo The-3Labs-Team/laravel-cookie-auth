@@ -42,11 +42,10 @@ php artisan vendor:publish --tag="laravel-cookie-auth-views"
 In your `Kernel.php` add the middleware as follows:
 
 ```php
-protected $middleware = [
-        // ...
-        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \The3LabsTeam\LaravelCookieAuth\LaravelCookieAuth::class, // <- here
-    ];
+protected $middlewareGroups = [
+    'web' => [
+        \The3LabsTeam\LaravelCookieAuth\LaravelCookieAuth::class,
+        //...
 ```
 
 ## Testing
