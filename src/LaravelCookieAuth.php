@@ -26,6 +26,17 @@ class LaravelCookieAuth
                     config('cookie-auth.cookie_lifetime')
                 )
             );
+
+            if ($response->isRedirection()) {
+                $response->withCookie(
+                    cookie(
+                        config('cookie-auth.cookie_name'),
+                        config('cookie-auth.cookie_value'),
+                        config('cookie-auth.cookie_lifetime')
+                    )
+                );
+            }
+
         }
 
         return $response;
