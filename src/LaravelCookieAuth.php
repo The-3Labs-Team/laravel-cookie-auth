@@ -36,7 +36,6 @@ class LaravelCookieAuth
                     )
                 );
             }
-
         }
 
         return $response;
