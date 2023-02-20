@@ -4,6 +4,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/the-3labs-team/laravel-cookie-auth/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/the-3labs-team/laravel-cookie-auth/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/the-3labs-team/laravel-cookie-auth/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/the-3labs-team/laravel-cookie-auth/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/the-3labs-team/laravel-cookie-auth.svg?style=flat-square)](https://packagist.org/packages/the-3labs-team/laravel-cookie-auth)
+[![Maintainability](https://api.codeclimate.com/v1/badges/652650a04e4ced51f33f/maintainability)](https://codeclimate.com/github/The-3Labs-Team/laravel-cookie-auth/maintainability)
 
 A simple middleware for Laravel applications that creates a cookie for logged-in users. Used for simple configuration with [FastCGI](https://gist.github.com/murdercode/cb061b178d2883017a247b1f6c24e345).
 
