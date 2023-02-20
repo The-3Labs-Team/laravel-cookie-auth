@@ -12,7 +12,6 @@ class LaravelCookieAuth
     /**
      * Handle an incoming request.
      *
-     * @param Request $request
      * @param Closure(Request): (\Illuminate\Http\Response|RedirectResponse) $next
      * @return Response
      */
@@ -33,8 +32,8 @@ class LaravelCookieAuth
                 $response->cookie($cookie);
             }
 
-            if (!$response->headers->getCookies() || !$response->headers->getCookies()[0]->getValue(
-                )) {
+            if (! $response->headers->getCookies() || ! $response->headers->getCookies()[0]->getValue(
+            )) {
                 return new Response('Unable to set skip_cache cookie', 500);
             }
         }
