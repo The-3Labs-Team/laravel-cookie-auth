@@ -27,7 +27,7 @@ class LaravelCookieAuth
             );
 
             if ($response->isRedirection()) {
-                $response->withCookie($cookie);
+                $response = $response->withCookie($cookie);
             } else {
                 $response->cookie($cookie);
             }
